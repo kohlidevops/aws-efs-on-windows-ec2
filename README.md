@@ -45,7 +45,7 @@ _Edit the Samba configuration file (/etc/samba/smb.conf)_
 ```
 sudo vi /etc/samba/smb.conf
 
-_//Add the following configuration at the bottom of the file_
+//Add the following configuration at the bottom of the file
 
 [shared]
 path = /mnt/efs/shared
@@ -58,12 +58,12 @@ writable = yes
 create mask = 0777
 directory mask = 0777
 
-_Create a Samba user:_
+Create a Samba user:
 
 sudo useradd smbuser
 sudo smbpasswd -a smbuser
 
-_Restart the Samba service:_
+Restart the Samba service:
 
 sudo systemctl restart smb
 sudo systemctl enable smb
